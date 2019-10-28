@@ -1,0 +1,9 @@
+<h1> Все пользователи </h1>
+<% @user.each do |user| %>
+  <div class="well">
+      <h3><%= user.first_name %></h3>
+      <p><%= user.last_name %></p>
+      <%= link_to "Просмотр страницы", user_path(user), :class => 'btn btn-link' %>
+  </div>
+
+<% end %>
